@@ -1,0 +1,43 @@
+.CurrencyCurrent {
+  height: 89vh;
+  width: 100%;
+  padding-top: 1vh;
+}
+
+.CurrencyCurrent .Rates {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.CurrencyCurrent .Rates .Rate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 13%;
+  height: 40px;
+  background: #ffffff;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgb(91, 94, 107);
+  margin-right: 1rem;
+  margin-right: 1.23%;
+}
+
+.CurrencyCurrent .Rates .Rate:nth-child(7n + 7) {
+  margin-right: 0;
+}
+
+.CurrencyCurrent .Rates .Rate p {
+  margin-right: 0.3rem;
+}
+
+.CurrencyCurrent .Rates .Rate img {
+  margin-left: 0.3rem;
+  color: #282c34;
+  font-weight: 600;
+}
+
+.CurrencyCurrent .Rates .Rate .Country {
+  color: #282c34;
+  font-weight: 600;
+}

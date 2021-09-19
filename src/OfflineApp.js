@@ -4,13 +4,7 @@ import { CurrencyConverter } from './scenes/CurrencyConverter/CurrencyConverter'
 import { CurrencyCurrent } from './scenes/CurrencyCurrent/CurrencyCurrent';
 import { Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getDataFromAPI, dataFilter } from './functions/functions';
-
-const currencyAPIKey = 'ab1823d5adf99a9713b6e6370ccc2177';
-const currencyAPILink = 'http://data.fixer.io/api/latest?access_key=';
-const countriesAPILink =
-  'https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/country';
-const countriesAPIKey = 'Token 424de5e54119408ba0deb60240f3612e552b18f7';
+import { dataFilter } from './functions/functions';
 
 function App() {
   const [offlineRates, setOfflineRates] = useState({
@@ -182,38 +176,16 @@ function App() {
     ZMK: 10554.721244,
     ZMW: 19.212132
   });
-  const [currencyData, setCurrencyData] = useState([
-    { name: 'AED', value: 4.306972 },
-    { name: 'AFN', value: 100.315547 },
-    { name: 'ALL', value: 121.304908 },
-    { name: 'AMD', value: 568.624537 },
-    { name: 'ANG', value: 2.105993 },
-    { name: 'AOA', value: 723.536149 },
-    { name: 'ARS', value: 115.248899 },
-    { name: 'AUD', value: 1.613804 },
-    { name: 'AWG', value: 2.110662 },
-    { name: 'AZN', value: 1.998058 },
-    { name: 'BAM', value: 1.947501 },
-    { name: 'BBD', value: 2.368968 },
-    { name: 'BDT', value: 100.06165 },
-    { name: 'BGN', value: 1.952209 },
-    { name: 'BHD', value: 0.441876 },
-    { name: 'BIF', value: 2339.317033 },
-    { name: 'BMD', value: 1.17259 }
-  ]);
+
   const [shortCountriesCodes, setShortCountriesCodes] = useState([]);
   const [dataKeysAndValues, setDataKeysAndValues] = useState([]);
 
   const randomId = () => Math.random().toString(36).slice(2);
 
   useEffect(() => {
-    getDataFromAPI(currencyAPIKey, currencyAPILink, setCurrencyData);
+    setShortCountriesCodes(dataFilter(offlineRates, 'shortCoutries'));
+    setDataKeysAndValues(dataFilter(offlineRates, 'getKeysAndValues'));
   }, []);
-
-  useEffect(() => {
-    setShortCountriesCodes(dataFilter(currencyData.rates, 'shortCoutries'));
-    setDataKeysAndValues(dataFilter(currencyData.rates, 'getKeysAndValues'));
-  }, [currencyData]);
 
   const AppStyles = {
     width: '80%',
@@ -223,7 +195,7 @@ function App() {
   };
 
   return (
-    <div className="App" style={AppStyles}>
+    <div className="OfflineApp" style={AppStyles}>
       <Header />
       <Route
         path="/"
