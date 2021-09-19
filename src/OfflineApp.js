@@ -191,12 +191,32 @@ function App() {
     width: '80%',
     height: '100%',
     margin: '0 auto',
-    padding: '0rem 3rem 0rem'
+    padding: '0rem 3rem 0rem',
+    paddingBottom: '6rem'
   };
 
   return (
-    <div className="OfflineApp" style={AppStyles}>
+    <div className="App" style={AppStyles}>
       <Header />
+      <p
+        style={{
+          position: 'absolute',
+          bottom: '1rem',
+          left: '50%',
+          transform: 'translate(-50%, 0)',
+          textAlign: 'center'
+        }}
+      >
+        This is offline version without API (data from 19 september 2021 /
+        mobile version coming soon), online version{' '}
+        <a
+          href="https://github.com/mathiasmichaelweiss/currency-converter"
+          target="_blank"
+          style={{ color: 'rgb(0, 191, 220)' }}
+        >
+          --> github repo
+        </a>
+      </p>
       <Route
         path="/"
         exact

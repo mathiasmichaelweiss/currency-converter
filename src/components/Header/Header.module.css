@@ -1,9 +1,12 @@
 .Header {
-  width: 100%;
+  width: 80%;
   height: 10vh;
+  position: fixed;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #282c34;
 }
 
 .Header h1 {
