@@ -219,7 +219,7 @@ function App() {
     maxWidth: '80%',
     height: '100%',
     margin: '0 auto',
-    paddingBottom: '5rem'
+    paddingBottom: '7rem'
   };
 
   return (

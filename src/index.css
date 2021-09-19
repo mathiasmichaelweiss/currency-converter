@@ -9,6 +9,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+#root {
+  overflow-x: hidden !important;
 }
 
 code {
@@ -94,4 +99,11 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: 400;
+}
+
+@media (max-width: 415px) {
+  h1 {
+    font-size: 1.2em !important;
+    width: 60% !important;
+  }
 }

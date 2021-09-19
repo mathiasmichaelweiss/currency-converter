@@ -34,3 +34,121 @@
 .Header nav ul li:hover {
   color: rgb(0, 191, 220);
 }
+
+.Burger {
+}
+
+.Burger .BurgerIcon {
+  position: relative;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.Burger .BurgerIcon::before,
+.Burger .BurgerIcon::after {
+  background: #fff;
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  border-radius: 5px;
+}
+
+.Burger .BurgerIcon::before {
+  bottom: 8px;
+}
+
+.Burger .BurgerIcon::after {
+  top: 8px;
+}
+
+.Burger nav {
+  font-size: 1.3em;
+  position: fixed;
+  right: -50rem;
+  transform: scale(1);
+  /* right: -10.5vw; */
+  height: 100vh;
+  width: 70vw;
+  top: 0;
+  bottom: 0;
+  background-color: #23262d;
+  transition: right 0.5s;
+}
+
+.Burger nav ul {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.Burger nav ul li {
+  color: rgb(0, 191, 220);
+  margin-bottom: 1rem;
+}
+
+.Burger nav .Close,
+.Burger nav .Close::after {
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.Burger nav .Close {
+  position: relative;
+  z-index: 1100;
+  left: 21rem;
+  top: 2.5rem;
+  transform: rotate(-45deg);
+}
+
+.Burger nav .Close::after {
+  content: '';
+  transform: rotate(-90deg);
+}
+
+@media (max-width: 415px) {
+  .Burger nav {
+    width: 100vw;
+  }
+
+  .Burger nav .Close {
+    position: relative;
+    z-index: 1100;
+    left: 15rem;
+    top: 2.5rem;
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 380px) {
+  .Burger nav {
+    width: 120vw;
+  }
+
+  .Burger nav .Close {
+    position: relative;
+    z-index: 1100;
+    left: 18.5rem;
+    top: 2.5rem;
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 330px) {
+  .Burger nav {
+    width: 120vw;
+  }
+
+  .Burger nav .Close {
+    position: relative;
+    z-index: 1100;
+    left: 14.5rem;
+    top: 2.5rem;
+    transform: rotate(-45deg);
+  }
+}
