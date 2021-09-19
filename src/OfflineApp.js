@@ -188,11 +188,10 @@ function App() {
   }, []);
 
   const AppStyles = {
-    width: '80%',
+    maxWidth: '80%',
     height: '100%',
     margin: '0 auto',
-    padding: '0rem 3rem 0rem',
-    paddingBottom: '6rem'
+    paddingBottom: '5rem'
   };
 
   return (

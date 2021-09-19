@@ -5,7 +5,7 @@ import App from './App';
 import OfflineApp from './OfflineApp';
 import { BrowserRouter } from 'react-router-dom';
 
-const isOffline = false;
+const isOffline = true;
 
 const app = (
   <BrowserRouter>{isOffline ? <OfflineApp /> : <App />}</BrowserRouter>
