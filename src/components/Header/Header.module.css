@@ -132,12 +132,13 @@
     width: 100vw;
   }
 
-  .Burger nav .Close {
+  .Burger nav .CloseWrapper {
     position: relative;
-    z-index: 1100;
     left: 15rem;
     top: 2.5rem;
-    transform: rotate(-45deg);
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
   }
 }
 
@@ -146,12 +147,13 @@
     width: 120vw;
   }
 
-  .Burger nav .Close {
+  .Burger nav .CloseWrapper {
     position: relative;
-    z-index: 1100;
     left: 18.5rem;
     top: 2.5rem;
-    transform: rotate(-45deg);
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
   }
 }
 
@@ -160,11 +162,12 @@
     width: 120vw;
   }
 
-  .Burger nav .Close {
+  .Burger nav .CloseWrapper {
     position: relative;
-    z-index: 1100;
     left: 14.5rem;
     top: 2.5rem;
-    transform: rotate(-45deg);
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
   }
 }
