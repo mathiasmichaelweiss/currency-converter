@@ -38,8 +38,16 @@
 .Burger {
 }
 
-.Burger .BurgerIcon {
+.Burger .BurgerWrapper {
   position: relative;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.Burger .BurgerIcon {
+  position: absolute;
+  top: 10px;
   width: 25px;
   height: 3px;
   background: #fff;
@@ -98,11 +106,19 @@
   background: #fff;
 }
 
-.Burger nav .Close {
+.Burger nav .CloseWrapper {
   position: relative;
-  z-index: 1100;
   left: 21rem;
   top: 2.5rem;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.Burger nav .Close {
+  top: 11px;
+  position: absolute;
+  z-index: 1100;
   transform: rotate(-45deg);
 }
 

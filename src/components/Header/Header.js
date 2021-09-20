@@ -37,14 +37,19 @@ export const Header = () => {
         ) : (
           <div className={classes.Burger}>
             <div
-              className={classes.BurgerIcon}
+              className={classes.BurgerWrapper}
               onClick={() => setBurgerStyles({ right: '-10.2rem' })}
-            ></div>
+            >
+              <div className={classes.BurgerIcon}></div>
+            </div>
+
             <nav style={burgerStyles}>
               <div
-                className={classes.Close}
+                className={classes.CloseWrapper}
                 onClick={() => setBurgerStyles({ right: '-50rem' })}
-              ></div>
+              >
+                <div className={classes.Close}></div>
+              </div>
               <ul>
                 <Link to="/currency-converter">
                   <li>converter</li>
