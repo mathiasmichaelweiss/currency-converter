@@ -40,10 +40,13 @@ export const CurrencyCurrent = ({
               <>
                 <div className={classes.Rate} key={randomId}>
                   <img
-                    src={`https://www.countryflags.io/${countryKey}/shiny/32.png`}
-                    alt={countryKey}
+                    style={{ position: 'relative', left: '-3px', margin: 0 }}
+                    src={`http://tolik-punkoff.com/scripts/countries/flags/${item
+                      .name[0] + item.name[1]}.png`}
+                    alt={item[0]}
                     key={randomId}
                   />
+
                   <p className={classes.Country} key={randomId}>
                     {shortCurrency}
                   </p>
