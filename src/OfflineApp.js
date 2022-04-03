@@ -180,7 +180,10 @@ function App() {
   const [shortCountriesCodes, setShortCountriesCodes] = useState([]);
   const [dataKeysAndValues, setDataKeysAndValues] = useState([]);
 
-  const randomId = () => Math.random().toString(36).slice(2);
+  const randomId = () =>
+    Math.random()
+      .toString(36)
+      .slice(2);
 
   useEffect(() => {
     setShortCountriesCodes(dataFilter(offlineRates, 'shortCoutries'));
@@ -206,8 +209,7 @@ function App() {
           textAlign: 'center'
         }}
       >
-        This is offline version without API (data from 19 september 2021 /
-        mobile version coming soon), online version{' '}
+        This is offline version without API (data from 19 september 2021)
         <a
           href="https://github.com/mathiasmichaelweiss/currency-converter"
           target="_blank"
